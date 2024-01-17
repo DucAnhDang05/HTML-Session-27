@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numbers = [1, 2, 3, 4, 5];
+        let newArr = numbers; //Gán giá trị của numbers cho newArr là tham 
+                              //chiếu không phải tham trị nên khi thay đổi trong newArr 
+                              //sẽ làm thay đổi cả trong numbers để chỉ thay đổi ở newArr 
+                              //ta có thể sử dụng slice() hoặc concat() để sao chép từ 
+                              //mảng đã tồn tại vào 1 mảng mới và đây được gọi là tham trị
+        newArr.push(8);
+        console.log(newArr);
+        console.log(numbers);
+    </script>
+</body>
+</html>

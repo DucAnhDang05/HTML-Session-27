@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = +prompt("Nhap so phan tu cua mang");
+        let a=[];
+        for(let i=0;i<n;i++){
+            a[i]=+prompt("Nhap vao phan tu thu "+i+" cua mang");
+        }
+        let min=a[0],max=a[0];
+        for(let i=1;i<n;i++){
+            if(a[i]<min){
+                min=a[i];
+            }
+            if(a[i]>min){
+                max=a[i];
+            }
+        }
+        console.log("So nho nhat trong mang la la: "+min);
+        console.log("So lon nhat trong mang la: " + max);
+    </script>
+</body>
+</html>

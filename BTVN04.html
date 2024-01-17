@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=[];
+        let n=+prompt("Nhap so phan tu cua mang");
+        let chan=[];
+        let le=[];
+        for(let i=0;i<n;i++){
+            a[i]=+prompt("Nhap phan tu "+i+" cua mang");
+        }
+        for(let i=0;i<n;i++){
+            if(a[i]%2===0){
+                chan.push(a[i]);
+            }else le.push(a[i]);
+        }
+        for(let i=0;i<chan.length;i++){
+            console.log(chan[i]);
+        }
+        for (let i = 0; i < le.length; i++) {
+                console.log(le[i]);
+        }
+    </script>
+</body>
+</html>

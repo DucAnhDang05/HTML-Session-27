@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=[];
+        let n = +prompt("Nhap so phan tu cua mang");
+        for (let i = 0; i < n; i++) {
+            a[i] = +prompt("Nhap phan tu " + i + " cua mang");
+        }
+        for(let i=0;i<n;i++){
+            for(let j=i+1;j<n;j++){
+                if(a[i]===a[j]){
+                    console.log(a[i]);
+                    break;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

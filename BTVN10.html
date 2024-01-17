@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = [];
+        let n = +prompt("Nhap so phan tu cua mang");
+        for (let i = 0; i < n; i++) {
+            a[i] = +prompt("Nhap phan tu " + i + " cua mang");
+        }
+        let longest = [];
+        let current = [];
+        for (let i = 0; i < n; i++) {
+            current.push(a[i]);
+            if (current.indexOf(a[i]) !== i) {
+                if (current.length > longest.length) {
+                    longest = current.slice();
+                }
+                let duplicate = current.indexOf(a[i]);
+                current = current.slice(duplicate + 1);
+            }
+        }
+        if (current.length > longest.length) {
+            longest = current.slice();
+        }
+        console.log(longest);
+    </script>
+
+</body>
+</html>
