@@ -7,19 +7,26 @@
 </head>
 <body>
     <script>
-        let a=[];
-        let n = +prompt("Nhap so phan tu cua mang");
+        let a = [];
+        let n = +prompt("Nhập số phần tử của mảng");
         for (let i = 0; i < n; i++) {
-            a[i] = +prompt("Nhap phan tu " + i + " cua mang");
+            a[i] = +prompt("Nhập phần tử " + i + " của mảng");
         }
-        for(let i=0;i<n;i++){
-            for(let j=i+1;j<n;j++){
-                if(a[i]===a[j]){
-                    console.log(a[i]);
+        let num;
+        for (let i = 0; i < n; i++) {
+            let b = 0;
+            for (let j = 0; j < n; j++) {
+                if (i !== j && a[i] === a[j]) {
+                    b = 1;
                     break;
                 }
             }
+            if (b === 0 ) {
+                num = a[i];
+                break;
+            }
         }
+        console.log("Phần tử đầu tiên duy nhất trong mảng là: " + num);
     </script>
 </body>
 </html>
